@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Application SALA</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="row">
+                <div class="text-center text-light bg-info col-md-12">
+                    <h1>Application SALA</h1>
+                    <p>Petite application pour illustrer Javasceipt avec firebase</p>
+                </div>
+            </div>
+            <div class="search">
+                <div class="container">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input type="text" class="search-todo form-control" placeholder="Filter todos"/>
+                            </div>
+                            <div class="col-md-8 form-check checkbox">
+                                <label>
+                                    <input type="checkbox" class="hidecompleted" />Masque complete
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="row status-header">
+                    <h5 class="status text-danger col-md-12 font-weight-bold"></h5>
+                </div>
+                <div class="todo-form">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input type="text" class="new-todo form-control" placeholder="Enter todo" required="true"/>
+                            </div>
+                            <div class="col-md-4">
+                                <button type="submit" class="submit-todo btn btn-primary">Ajouter une tache</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="todos col-md-12"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>Develloped by  <a href="https://ezechiel-sums.web.app">Sums</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+    apiKey: "AIzaSyAqSOsJ2NTXczUEl0mlWxmr4Z2_sD9aL40",
+    authDomain: "hotelvenusdrc.firebaseapp.com",
+    databaseURL: "https://hotelvenusdrc.firebaseio.com",
+    projectId: "hotelvenusdrc",
+    storageBucket: "hotelvenusdrc.appspot.com",
+    messagingSenderId: "1004982983910",
+    appId: "1:1004982983910:web:3720fdf5da06f0dc0c2f27",
+    measurementId: "G-5T13NY7QW8"
+  };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    </script>
+    <script src="uuidv4.js"></script>
+    <script src="jquery.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
